@@ -10,3 +10,11 @@ join Contracts hd on nv.employee_id = hd.employee_id
 where nv.address = "Hai Chau" and hd.date_started = "2019/12/12";
 
 select * from v_Employees;
+
+--  task 22
+-- 22.Thông qua khung nhìn V_NHANVIEN 
+-- thực hiện cập nhật địa chỉ thành “Liên Chiểu” 
+-- đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+
+update v_Employees
+set address = "Lien Chieu";
