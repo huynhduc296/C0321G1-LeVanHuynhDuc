@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #header {
+            height: 8vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: white;
+        }
+
+        #content {
+            min-height: 93vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            margin-top: 8vh;
+            top: 8vh;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #left-content {
+            min-height: 9vh;
+            margin-top: 20px;
+            position: fixed;
+            left: 0;
+        }
+
+        #main-content {
+            min-height: 9vh;
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-left: 30%;
+        }
+
+        #right-content {
+            min-height: 9vh;
+            margin-top: 20px;
+            position: fixed;
+            right: 0;
+        }
+
+        .left {
+            width: 25%;
+        }
+
+        .main {
+            width: 40%;
+        }
+
+        .right {
+            width: 25%
+        }
+
+        #left-header {
+            display: flex;
+            justify-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        #left-header #iconFb {
+            height: 60%;
+            margin: auto;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        #left-header input {
+            height: 60%;
+            margin: auto;
+            margin-left: 0;
+            width: 50%;
+            border-radius: 20px;
+            background-color: #f1f1f1;
+            /*border-color: inherit;*/
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            padding-left: 35px;
+            font-size: 14px;
+        }
+
+        textarea:focus, input:focus {
+            outline: none;
+        }
+
+        #searchIcon {
+            height: 40%;
+            margin: auto;
+            margin-left: 2%;
+            margin-right: 2%;
+            position: absolute;
+            left: 2%;
+            top: 30%;
+        }
+
+        #menu {
+            padding-left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            min-height: 90%;
+            margin: auto;
+        }
+
+        #menu li {
+            width: 18%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #menu li:hover {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            transition: all 200ms;
+            background-image: none;
+        }
+
+        #main-header {
+            display: flex;
+        }
+
+        #menu li img {
+            height: 30px;
+            background-image: none;
+        }
+
+        #right-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #menu2 {
+            padding-left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            list-style: none;
+            /*min-height: 90%;*/
+            margin: 1px;
+        }
+
+        #menu2 li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            background-color: #f1f1f1;
+            border-radius: 18px;
+            height: 36px;
+            margin: 5px;
+            padding: 0px;
+        }
+
+        #menu2 li img {
+            height: 20px;
+            background-image: none;
+        }
+
+        #menu2 li:hover {
+            cursor: pointer;
+            background-color: coral;
+            transition: all 200ms;
+            background-image: none;
+        }
+
+        #menu3 li {
+            padding: 10px;
+            display: flex;
+        }
+
+        #menu3 li:hover {
+            cursor: pointer;
+            background-color: coral;
+            transition: all 200ms;
+            background-image: none;
+        }
+
+        #menu3 li img {
+            height: 40px;
+            background-image: none;
+            border-radius: 20px;
+            width: 40px;
+        }
+
+        #menu3 li p {
+            text-align: center;
+            margin-left: 4px;
+        }
+
+        #menu3 {
+            padding: 0;
+            margin-top: 0;
+        }
+
+
+        #main-content img {
+            height: 40px;
+            background-image: none;
+            border-radius: 20px;
+            width: 40px;
+
+        }
+
+        #sn {
+            background-color: #f1f1f1;
+            height: 40px;
+            width: 80%;
+            margin-left: 5px;
+            border: none;
+
+
+            border-radius: 20px;
+
+            border-color: inherit;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding-left: 35px;
+            font-size: 14px;
+        }
+
+        #menu4 .d1 {
+            justify-content: flex-start;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #menu4 .d1 li img {
+            height: 200px;
+            width: 200px;
+            display: inline;
+        }
+
+        #menu4 .d1 p {
+            font-size: 18px;
+            font-family: Arial;
+        }
+
+        #menu4 .d1 li {
+
+            display: flex;
+            display: inline;
+        }
+
+        #menu4 .d1 li p {
+            font-size: 11px;
+            margin-left: 40px;
+        }
+
+        #d3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #d3 li {
+            padding: 5px;
+            margin: 2px;
+            font-size: 11px;
+        }
+
+        .ct {
+            margin: 5px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .ct div {
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .ct1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .ct1 * {
+            margin: 5px
+        }
+
+        .ct2 {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            height: 2px;
+        }
+
+        .ct3 ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+            margin: 5px;
+        }
+
+        .ct3 ul li {
+            width: 33%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .ct3 ul li:hover {
+            background-color: wheat;
+            cursor: pointer;
+        }
+
+        .ct3 ul li * {
+            margin: 4px;
+        }
+
+        .ct3 ul p {
+            font-size: 13px;
+        }
+
+        .ct4 ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+            margin: 5px;
+        }
+
+        .ct4 ul li {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+        .ct4 ul .sn1 p {
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .sn2 {
+            justify-content: center;
+            border-radius: 100%;
+            width: 40px !important;
+            height: 40px;
+            display: flex;
+
+        }
+
+        .sn2:hover {
+            background-color: red;
+            cursor: pointer;
+        }
+
+        .sn2 img {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .ct5 p {
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ct6 {
+            margin: 0;
+        }
+
+        .ct6 img {
+            height: 100% !important;
+            width: 100% !important;
+            border-top: 1px solid whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+            border-radius: 0px;
+            padding: 0;
+        }
+
+        .ct7 ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around;
+            padding: 0;
+            margin: 5px;
+        }
+
+        .ct7 ul li {
+            width: 33%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: center;
+        }
+
+        .ct7 ul li:hover {
+            background-color: wheat;
+            cursor: pointer;
+        }
+
+        .ct7 ul li * {
+            margin: 3px;
+        }
+
+        .ct7 ul p {
+            font-size: 13px;
+        }
+
+        .ct7 ul li img {
+            width: 20px !important;
+            height: 20px !important;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="left-header" class="left">
+        <img id="iconFb" src="https://anh.eva.vn/upload/4-2016/images/2016-11-30/1480494815-facebook-sao-viet.png">
+        <img id="searchIcon"
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png">
+        <input width="40%" placeholder="Tìm kiếm trên Facebook">
+    </div>
+    <div id="main-header" class="main">
+        <ul id="menu">
+            <li>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/home-1767389-1505253.png">
+            </li>
+            <li>
+                <img src="https://img.icons8.com/ios/452/laptop-play-video--v2.png">
+            </li>
+            <li><img src="https://i.pinimg.com/originals/77/e5/0c/77e50c04f9f512a456eb3e135a1c013b.png"></li>
+            <li>
+                <img src="https://static.thenounproject.com/png/58999-200.png">
+            </li>
+            <li><img
+                    src="https://toppng.com/uploads/preview/controller-png-clip-art-black-and-white-stock-game-icon-11563059453d6ayox78n4.png">
+            </li>
+        </ul>
+    </div>
+    <div id="right-header" class="right">
+        <ul id="menu2">
+            <li>
+                <img style="border-radius: inherit "
+                     src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.6435-9/107609900_2726259711030517_554895711981552791_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=cK9V_waYrtcAX-aoJIi&_nc_ht=scontent.fhan5-5.fna&oh=3ea37759f0bbb78c8b3f1f51b3069b36&oe=60D5F4CB">
+            </li>
+            <li>
+                <img src="https://cdn4.vectorstock.com/i/1000x1000/13/78/menu-icon-vector-21641378.jpg">
+            </li>
+            <li><img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/facebook_messenger_icon_136645.png"></li>
+            <li>
+                <img src="https://cdn0.iconfinder.com/data/icons/essentials-solid/100/Notification-512.png">
+            </li>
+            <li style="overflow:visible!important">
+                <img
+                        src="https://cdn4.iconfinder.com/data/icons/ios-edge-glyph-3/25/Down-Carrot-512.png">
+
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="content">
+    <div id="left-content" class="left">
+        <ul id="menu3">
+            <li><img src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.6435-9/107609900_2726259711030517_554895711981552791_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=cK9V_waYrtcAX-aoJIi&_nc_ht=scontent.fhan5-5.fna&oh=3ea37759f0bbb78c8b3f1f51b3069b36&oe=60D5F4CB">
+                <p>Huỳnh Đức</p></li>
+            <li><img src="https://cdn4.iconfinder.com/data/icons/charity-donation-1/128/f-02-512.png">
+                <p>Bạn bè</p></li>
+            <li><img src="https://icon-library.com/images/watch-icon-png/watch-icon-png-19.jpg">
+                <p>Kỷ niệm</p></li>
+            <li><img src="https://static.thenounproject.com/png/58999-200.png">
+                <p>Nhóm</p></li>
+            <li><img src="https://image.flaticon.com/icons/png/512/31/31858.png">
+                <p>Marketplace</p></li>
+            <li><img src="https://img.icons8.com/fluent-systems-filled/452/video-clip.png">
+                <p>Watch</p></li>
+        </ul>
+    </div>
+    <div id="main-content" class="main">
+        <div class="ct">
+            <div class="ct1">
+                <img src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.6435-9/107609900_2726259711030517_554895711981552791_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=cK9V_waYrtcAX-aoJIi&_nc_ht=scontent.fhan5-5.fna&oh=3ea37759f0bbb78c8b3f1f51b3069b36&oe=60D5F4CB">
+                <input
+                        id="sn" placeholder="Bạn đang nghĩ gì?">
+            </div>
+            <div class="ct2">
+            </div>
+            <div class="ct3">
+                <ul>
+                    <li><img
+                            src="https://png.pngtree.com/png-clipart/20201208/original/pngtree-hd-live-streaming-icon-in-black-on-red-background-png-image_5601913.jpg">
+                        <p>Video Trực Tiếp</p></li>
+                    <li><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png">
+                        <p>Ảnh/Video</p></li>
+                    <li><img
+                            src="https://thumbs.dreamstime.com/b/smile-vector-icon-happy-smiling-face-emoticon-icon-flat-style-yellow-symbol-white-background-smile-vector-icon-happy-150159497.jpg">
+                        <p>Cảm xúc/Hoạt động</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ct">
+            <div class="ct4">
+                <ul>
+                    <li class="sn1"><img
+                            src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/70195653_114555543249120_5193414973321117696_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=W89KGJD5NK0AX8dBaI2&tn=zuhuWH42CLjVyaMY&_nc_ht=scontent.fhan5-6.fna&oh=e82909d37170aed0188a43dc2c7ed32e&oe=60D6D743">
+                        <p>Radio Tâm Sự</p></li>
+                    <li class="sn2"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAAD7+/vY2NjAwMAqKir39/fo6Oji4uLU1NR/f389PT0jIyOCgoJeXl6urq4wMDBqamodHR2jo6N4eHjMzMyYmJhKSkq0tLQvLy9TU1OLi4vl5eU3NzcVFRXx8fGTk5MT8jlOAAAC6klEQVR4nO3a2XbiMAyA4ThhDyVAgdKyvv9TDiG0DWSRZJgzc5z/u7eOsOUlxlEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/E+GyXg8TkanlwaNR0XU+KVRT0XUoaHJevPRd4XjYbHdvySPQW+STm9Rp+mkN3hJ1P12cTjeovY/NmtNm+TNPfrMnk6nN6tEnfWeDXrKPitR3xKh0fqr0uZqZ6mBR3HWrw3az54p1+GuPtWvtoHcV3v6x7t3Kr15Y9C5/zi+N6c6a5xXm+ZGF4eRVybxojXqwm8YR4fWqJvaRoOWASxsPVJJlkLQpTRx6mylVGc1K8ewvVeuzuZUenJQZ6/Usxz0UFk4hke5lXMrYypiX19Za2OlCXp8+IknVSqXxdiUimYEc7ZRrG5n9e5OK3GqbGVaUhNtUGeZiy2L6L20vIipxr0wVqcSS4vMr6V+RR3rUy3NKd10KfTVybRvE/cW6m6rPzzU+5ngA0Mj/VTUTsKCdipqJ2Hhe88w1GhOt/PHzSeZOnNdaYxsqd7qdGhr5WaqXDJj1EwVVTyVPCi2jImxlW4QLfMl19cENQ6hc5O8lXYr/KXZ922zMKeZicb55IpN0VpOl7Vd8bloLSdV8Q/0+8+3zCsXRXfblueC3G/2wsj7zScXuUw9clH0m71I835be7RKxaXdvHq526rQRn+2LFnrj3ll4hWcTy6pFNS+Jrr8IO0z8uJJOZ7KMSqmUmXoT/IlK6/eFrdn8751Je2z9lXf5ZXh09sN9yBP9rZYGe33SA2mkerb/tFZyMXwiVMifZgpLi+qjpFXLrt/8gsbLkgFHRjD8Odh+Gtp+Pth+Gea8M+l4X9bhP992IFv/PDvacK/a+vAfWn4d94d+N8i/P+eOvD/YQf+Aw7/f/wOvMXowHuaDryJisJ/1xZ14G1iFP770lzob4SvAn/nfRP2W30AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7/sD3Jkz+IHrf6kAAAAASUVORK5CYII=">
+                    </li>
+                </ul>
+            </div>
+            <div class="ct5"><p>Cô gái hot nhất mạng xã hội ngày hôm nay! Xin từ chối hiểu =)))</p></div>
+            <div class="ct6"><img
+                    src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/202295258_561135215257815_7692009619209946781_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=730e14&_nc_ohc=Rfw441Tsu0EAX9H3H-_&_nc_ht=scontent.fhan5-6.fna&oh=1e3707b49c50e676c8181deba8364519&oe=60D63D36">
+            </div>
+            <div class="ct7">
+                <ul>
+                    <li><img src="https://i.pinimg.com/736x/96/a2/71/96a27139e8352b383677452d7dd6edd2.jpg">
+                        <p>Thích</p>
+                    </li>
+                    <li><img src="https://image.flaticon.com/icons/png/512/1380/1380338.png">
+                        <p>Bình luận</p></li>
+                    <li><img src="https://image.flaticon.com/icons/png/512/25/25419.png">
+                        <p>Chia sẽ</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ct">
+            <div class="ct4">
+                <ul>
+                    <li class="sn1"><img
+                            src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/158745795_264934575097278_108930266287974140_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=kaLZ7tNZvLEAX_Ltci3&_nc_ht=scontent.fhan5-6.fna&oh=70c1a7cf8c65aef7dee2f18fad015049&oe=60D65010">
+                        <p>CEO Lê Trùng Dương</p></li>
+                    <li class="sn2"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAAD7+/vY2NjAwMAqKir39/fo6Oji4uLU1NR/f389PT0jIyOCgoJeXl6urq4wMDBqamodHR2jo6N4eHjMzMyYmJhKSkq0tLQvLy9TU1OLi4vl5eU3NzcVFRXx8fGTk5MT8jlOAAAC6klEQVR4nO3a2XbiMAyA4ThhDyVAgdKyvv9TDiG0DWSRZJgzc5z/u7eOsOUlxlEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/E+GyXg8TkanlwaNR0XU+KVRT0XUoaHJevPRd4XjYbHdvySPQW+STm9Rp+mkN3hJ1P12cTjeovY/NmtNm+TNPfrMnk6nN6tEnfWeDXrKPitR3xKh0fqr0uZqZ6mBR3HWrw3az54p1+GuPtWvtoHcV3v6x7t3Kr15Y9C5/zi+N6c6a5xXm+ZGF4eRVybxojXqwm8YR4fWqJvaRoOWASxsPVJJlkLQpTRx6mylVGc1K8ewvVeuzuZUenJQZ6/Usxz0UFk4hke5lXMrYypiX19Za2OlCXp8+IknVSqXxdiUimYEc7ZRrG5n9e5OK3GqbGVaUhNtUGeZiy2L6L20vIipxr0wVqcSS4vMr6V+RR3rUy3NKd10KfTVybRvE/cW6m6rPzzU+5ngA0Mj/VTUTsKCdipqJ2Hhe88w1GhOt/PHzSeZOnNdaYxsqd7qdGhr5WaqXDJj1EwVVTyVPCi2jImxlW4QLfMl19cENQ6hc5O8lXYr/KXZ922zMKeZicb55IpN0VpOl7Vd8bloLSdV8Q/0+8+3zCsXRXfblueC3G/2wsj7zScXuUw9clH0m71I835be7RKxaXdvHq526rQRn+2LFnrj3ll4hWcTy6pFNS+Jrr8IO0z8uJJOZ7KMSqmUmXoT/IlK6/eFrdn8751Je2z9lXf5ZXh09sN9yBP9rZYGe33SA2mkerb/tFZyMXwiVMifZgpLi+qjpFXLrt/8gsbLkgFHRjD8Odh+Gtp+Pth+Gea8M+l4X9bhP992IFv/PDvacK/a+vAfWn4d94d+N8i/P+eOvD/YQf+Aw7/f/wOvMXowHuaDryJisJ/1xZ14G1iFP770lzob4SvAn/nfRP2W30AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg7/sD3Jkz+IHrf6kAAAAASUVORK5CYII=">
+                    </li>
+                </ul>
+            </div>
+            <div class="ct5"><p>Xuất bản hơi giừ 1996 ...🤪</p></div>
+            <div class="ct6"><img
+                    src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/201977963_326425668948168_3937668524571941231_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=730e14&_nc_ohc=4KYRREcg_zwAX9YUIFC&_nc_ht=scontent.fhan5-6.fna&oh=4daed4a9467eb264c31afa1ca006b100&oe=60D62F28">
+            </div>
+            <div class="ct7">
+                <ul>
+                    <li><img src="https://i.pinimg.com/736x/96/a2/71/96a27139e8352b383677452d7dd6edd2.jpg">
+                        <p>Thích</p>
+                    </li>
+                    <li><img src="https://image.flaticon.com/icons/png/512/1380/1380338.png">
+                        <p>Bình luận</p></li>
+                    <li><img src="https://image.flaticon.com/icons/png/512/25/25419.png">
+                        <p>Chia sẽ</p></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div id="right-content" class="right">
+        <div id="menu4">
+            <div class="d1">
+                <p>Được tài trợ</p>
+                <div id="d3">
+                    <li><img src="https://i.ytimg.com/vi/SbR0_YbVSbU/maxresdefault.jpg"></li>
+                    <li>Samsung Galaxy A12
+                        Mua tại samsung.com
+                    </li>
+                </div>
+
+
+            </div>
+            <div class="d1"><p>Trang của bạn</p></div>
+            <div class="d1"><p>Lời mời kết bạn</p></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
