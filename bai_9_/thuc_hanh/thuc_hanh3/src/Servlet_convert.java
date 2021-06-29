@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Servlet_convert")
-public class Servlet_convert extends HttpServlet {
+@WebServlet(name = "Servlet_convert",urlPatterns = "/convert")
+public class Servlet_convert extends HttpServlet  {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
